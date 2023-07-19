@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacs</title>
+    <link href="../css/style.css" rel="stylesheet" />
+</head>
+<body>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+
+    <div class="page-wrapper"></div>
+    	<nav class="navbar-container">
+        	<div class="navbar-top">
+          		<ul class="navbar-list">
+              		<li class="nav"><a href="../index.html">Home</a></li>
+              		<li class="nav"><a href="./about.html">About</a></li>
+              		<li class="nav"><a href="./contact.html">Contact</a></li>
+          		</ul>
+        	</div>
+    	</nav>
+
+		<div>
+			<h1>PLEASE FILL OUT THE FORM</h1>
+
+			<div class="container">
+				<form method="POST" action="https://formspree.io/f/mbjvjvov">
+					<input type="hidden" id="send_to" name="send_to" value="kantarnik_ilia@gmail.ru">
+				
+					<fieldset>
+						<legend>Your contact information</legend>
+				
+						<label for="name">Your name <span class="Star">*</span></label>
+						<input type="text" id="name" name="name" autocomplete="given-name" pattern="[A-Za-z]+" required>
+				
+						<label for="familyname">Family name</label>
+						<input type="text" id="familyname" name="familyname" autocomplete="family-name">
+				
+						<label for="phone">Phone number <span class="Star">*</span></label>
+						<input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[0-9+]+" maxlength="11" placeholder="Don't forget the area code!" required>
+				
+						<label for="email">Email <span class="Star">*</span></label>
+						<input type="email" id="email" name="email" autocomplete="email" required>
+					</fieldset>
+				
+					<fieldset>
+						<legend>And some more information</legend>
+				
+						<label for="date">Requested date of birthday <span class="Star">*</span></label>
+						<input type="date" id="date" name="date" required>
+				
+						<label for="qty">Match this site from 1 to 10 <span class="Star">*</span></label>
+						<input type="number" id="qty" name="qty" min="1" max="10" required>
+				
+						<label for="abtype">What did you want to say developer <span class="Star">*</span></label>
+						<select class="abtype" id="abtype" name="abtype" required>
+							<option selected disabled>Select one...</option>
+							<option value="practice">You need more practice</option>
+							<option value="design">Good design</option>
+							<option value="Nbad">Not bad</option>
+							<option value="BobMarley">Don't worry, be happm</option>
+						</select>
+				
+						<label for="comments">Special requests:<span class="Star">*</span></label>
+						<textarea id="comments" name="comments" required></textarea>
+				
+						<label for="number-code" calss="lastinput">Enter number code <span class="Star">*</span></label>
+						<input type="text" id="number-code" name="number-code" pattern="[0-9!@#$%^&*()_+{}|:\>?~-]+" placeholder="Magic code!" required>
+				
+				
+						<button class="submit" type="submit">Submit</button>
+					</fieldset>
+				</form>
+			</div>
+			<p>_____________________</p>
+			<p>_____________________</p>
+		</div>
+        
+
+    	<footer>
+			<div class="leftfooter">
+			  <ul class="listleftfooter">
+				  <li class="list-f"><a href="../index.html">Home</a></li>
+				  <li class="list-f"><a href="../pages/about.html">About</a></li>
+				  <li class="list-f"><a href="../pages/contact.html">Contact</a></li>
+			  </ul>
+			</div>
+			<div class="rightfooter">
+			  <p>This page was built using:</p>
+			  <p id="out_arr"></p>
+			</div>
+		  </footer>
+	</div>
+	<script src="../js/footer.js"></script>
+	<script src="../js/validator.js"></script>
+	</body>
+</html>
